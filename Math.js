@@ -15,3 +15,4 @@ console.log(Math.round(a))
 
 a = Math.sqrt(25) // Возвращает положительный квадратный корень числа.
 console.log(a)
+

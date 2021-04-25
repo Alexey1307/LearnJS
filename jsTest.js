@@ -1,17 +1,25 @@
-let a = Math.E // Экспонента 2.718281828459045
-console.log(a);
+//Умножение всех свойств объекта на 2
+let menu = {
+  width: 200,
+  height: 300,
+  title: "My menu"
+};
 
-a = Math.PI // Число Пи 3.141592653589793
-console.log(a);
+// function multiplyNumeric (obj) {
+// 	for(let key in obj){
+// 		if (typeof obj[key] == 'number') {
+// 			obj[key] *= 2;
+// 		}
+// 	}
+// }
 
-a = Math.random() // Возвращает псевдослучайное число в диапазоне от 0 до 1.
-console.log(a);
+function multiplyNumeric(obj) {
+  for (let key in obj) {
+    if (typeof obj[key] == 'number') {
+      obj[key] *= 2;
+    }
+  }
+}
 
-a = Math.pow(2, 3) // Возведение в степень - 2 в 3ей степени
-console.log(a);
-
-a = 4.3
-console.log(Math.round(a))
-
-a = Math.sqrt(25)
-console.log(a)
+multiplyNumeric(menu)
+console.log(menu)
