@@ -130,3 +130,37 @@ console.log('user2= ' + user2.name) //Gans
 
 //Операторы равенства == и строгого равенства === для объектов работают одинаково.
 //Два объекта равны только в том случае, если это один и тот же объект.
+
+//Методы объекта.
+//Синтаксис длинный, с 'function':
+user = {
+	sayHi: function(){
+		console.log('Hi')
+	}
+};
+
+//Синтаксис короткий без 'function' и двоеточия:
+user = {
+	sayHi(){
+		console.log('Hi') //тоже самое что и с 'function'.
+	}
+};
+
+//Создание нескольких функций в объекте.
+let ladder = {
+  step: 0,
+  up() {
+    this.step++;
+  },
+  down() {
+    this.step--;
+  },
+  showStep: function() { // показывает текущую ступеньку
+    console.log( this.step );
+  }
+};
+
+ladder.up();
+ladder.up();
+ladder.down();
+ladder.showStep()
